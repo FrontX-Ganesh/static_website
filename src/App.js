@@ -7,20 +7,22 @@ import SingleProduct from "./SingleProduct";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./Cart";
 import Error from "./Error";
+import Header from "./Components/Header";
 
 const App = () => {
   return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/abouts" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/single_product/:id" element={<SingleProduct />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Router>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/abouts" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/single_product/:id" element={<SingleProduct />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
   )
 };
 
