@@ -7,15 +7,15 @@ const NavTabs = [
   },
   {
     "key": "2",
-    "title": "Contact",
-    "onclick": "contact",
-    "to" : "/contact"
-  },
-  {
-    "key": "3",
     "title": "About",
     "onclick": "abouts",
     "to" : "/abouts"
+  },
+  {
+    "key": "3",
+    "title": "Contact",
+    "onclick": "contact",
+    "to" : "/contact"
   },
   {
     "key": "4",

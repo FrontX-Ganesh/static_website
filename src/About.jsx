@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const About = () => {
+const About = (props) => {
+
   return (
-    <h1>About</h1>
+    <>
+      <div className='container'>
+        <h1>{props.HeadingName}</h1>
+        <p>Working As Software developer in Tickleright Brain Eduacation.</p>
+      </div>
+    </>
   )
-}
+};
 
 export default About;
