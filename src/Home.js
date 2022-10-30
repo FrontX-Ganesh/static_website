@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './Css/HomeAbout.css';
 
-const Home = () => {
+const Home = (props) => {
   return (
-    <h1>Home</h1>
+    <>
+      <div className='people'>
+       <div> <h1>{props.HeadingName}</h1></div>
+        <div> <p>Working As Software developer in Tickleright Brain Eduacation.</p></div>
+      </div>
+    </>
   )
 }
 
