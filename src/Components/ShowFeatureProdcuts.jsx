@@ -1,14 +1,21 @@
 import React from 'react';
-import '../Css/FeatureProducts.css'
+import '../Css/FeatureProducts.css';
+import { Link } from 'react-router-dom';
+import FormatPrice from '../Helper/FormatPrice';
 
 const ShowFeatureProdcuts = ({ ele }) => {
-    console.log(ele);
     return (
         <>
             <div className="image-data">
-                <img src={ele.image} alt="" loading="lazy" />
-                <h1>{ele.company}</h1>
+                <Link to={`/single_product/${ele.id}`}>
+                    <img src={ele.image} alt={ele.name} loading="lazy" />
+                </Link>
+                <div className='brand_info'>
+                    <h3>{ele.company}</h3>
+                    <h3><FormatPrice price={ele.price} /></h3>
+                </div>
             </div>
+
         </>
     )
 }

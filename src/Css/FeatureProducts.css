@@ -5,3 +5,7 @@
 .image-data h1{
     text-align: center;
 }
+.brand_info{
+    display: flex;
+    justify-content: space-around;
+}

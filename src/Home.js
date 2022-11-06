@@ -5,7 +5,11 @@ import { AppContext } from "./Context/ProductContext";
 
 const Home = (props) => {
 
-  const { featureProdcuts } = useContext(AppContext);
+  const { isLoading, featureProdcuts } = useContext(AppContext);
+
+  if(isLoading){
+    return <div className='loading_images'> ........Loading </div>
+  }
 
   return (
     <>
