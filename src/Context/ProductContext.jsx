@@ -1,5 +1,5 @@
 import { createContext, useEffect } from "react";
-import App from '../App';
+import App from "../Components/App";
 import axios from "axios";
 import { useReducer } from "react";
 import prodcutReducer from "../Reducer/prodcutReducer";
@@ -12,7 +12,9 @@ const initialState = {
     isLoading: false,
     isError: false,
     prodcuts: [],
-    featureProdcuts: []
+    featureProdcuts: [],
+    isSingleLoading: false,
+    isSingleProduct: []
 }
 
 const AppProvider = () => {
@@ -30,12 +32,23 @@ const AppProvider = () => {
         });
     }
 
+    const getSigleProducts = (url) =>{
+        dispach({type: "SET_SINGLE_LOADING"});
+        axios.get(url)
+        .then((res) => {
+            dispach({type: "GET_SINGLE_API_DATA", payload : res});
+        })
+        .catch((err) => {
+            dispach({type: "API_SINGLE_ERROR"});
+        });
+    }
+
     useEffect(() => {
         getProducts(API);
     },[]);
 
     return (
-        <AppContext.Provider value={{ ...state }}>
+        <AppContext.Provider value={{ ...state, getSigleProducts }}>
             <App />
         </AppContext.Provider>
     )

@@ -25,6 +25,19 @@ const prodcutReducer = (state, action) => {
         isError: true
       }
 
+    case "SET_SINGLE_LOADING":
+      return {
+        ...state,
+        isSingleLoading: true
+      }
+
+    case "GET_SINGLE_API_DATA":
+      return {
+        ...state,
+        isSingleLoading: false,
+        isSingleProduct: action.payload
+      }
+
     default:
       return state;
   }
