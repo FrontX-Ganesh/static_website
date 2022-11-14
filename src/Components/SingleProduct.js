@@ -2,13 +2,24 @@ import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { AppContext } from '../Context/ProductContext'
 
+const API = "https://api.pujakaitem.com/api/products";
 
 const SingleProduct = () => {
-  
-  const API = "https://api.pujakaitem.com/api/products";
+  const { isSingleProduct, isSingleLoading, getSigleProducts } = useContext(AppContext);
   const { id } = useParams();
-  const { isSingleLoading, isSingleProduct, getSigleProducts } = useContext(AppContext);
-  
+
+  const {
+    id : alias,
+    name,
+    company,
+    price,
+    description,
+    category,
+    stock,
+    stars,
+    reviews
+  } = isSingleProduct;
+
   useEffect(()=>{
     getSigleProducts(`${API}?id=${id}`);
   },[])
@@ -17,10 +28,9 @@ const SingleProduct = () => {
     return <div>....... Single Product Loading</div>
   }
 
-
   return (
     <>
-      <div>Single Product</div>
+      <div>Single Product {name}</div>
     </>
   )
 }

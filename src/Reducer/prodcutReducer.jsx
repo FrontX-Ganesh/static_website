@@ -35,7 +35,7 @@ const prodcutReducer = (state, action) => {
       return {
         ...state,
         isSingleLoading: false,
-        isSingleProduct: action.payload
+        isSingleProduct: action.payload.data
       }
 
     default:
