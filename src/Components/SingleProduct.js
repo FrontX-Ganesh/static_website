@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { AppContext } from '../Context/ProductContext'
+import { AppContext } from '../Context/ProductContext';
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -25,7 +25,7 @@ const SingleProduct = () => {
   },[])
 
   if(isSingleLoading){
-    return <div>....... Single Product Loading</div>
+    return <div class="loader"></div>
   }
 
   return (
