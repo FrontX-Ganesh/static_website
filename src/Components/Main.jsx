@@ -8,7 +8,6 @@ import Error from "./Error";
 import '../Css/Main.css';
 import { Routes, Route } from "react-router-dom";
 
-
 const Main = () => {
   return (
         <Routes>

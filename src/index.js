@@ -5,7 +5,6 @@ import App from "./Components/App.js";
 import reportWebVitals from "./reportWebVitals";
 import { AppProvider } from "./Context/ProductContext";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
