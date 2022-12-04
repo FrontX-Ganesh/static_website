@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <Link to="/" onClick={() => setActiveTab('home')}><img className='logo' alt='Vicky More' src="https://pps.whatsapp.net/v/t61.24694-24/308716314_792466778712569_5199847584127189700_n.jpg?ccb=11-4&oh=01_AdTrUoCNAUgrxuJccvFN-gAI8AGFYWU7WNPVIMUICQ9XCw&oe=636A8C06" /></Link>
+        <Link to="/" onClick={() => setActiveTab('home')}><img className='logo' alt='GDV' src="https://pps.whatsapp.net/v/t61.24694-24/294343466_418717420276315_3146848769320897367_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdTqrD2a51yUNsUW1elqAyCHNUDnJOCcaFq_Dff1gghcZg&oe=6399DAF8" /></Link>
         <div className="header-right">
           {
             NavTabs.map((item,index) => {

@@ -6,4 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    line-height: 2.3;
+}
+.dealOfDay{
+    color: #0000ff;
 }
