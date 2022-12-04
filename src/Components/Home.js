@@ -8,7 +8,7 @@ const Home = (props) => {
   const { isLoading, featureProdcuts } = useContext(AppContext);
 
   if(isLoading){
-    return <div class="loader"></div>
+    return <div className="loader"></div>
   }
 
   return (
